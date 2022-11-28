@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+
+export async function getStaticPaths() {
+
+  // api > albums > album.id
+
+  const albums  = await fetch(`https://jsonplaceholder.typicode.com/albums/`)
+    .then((data) => data.json());
+
+  return albums.map((album: { id: number; title: string; userId: number}) => {
+    return {
+      params: { id: album.id },
+      props: { album }
+    };
+  })
+}
+
+const { album } = Astro.props;
+---
+
+<Layout title='Individual Album'>
+  <h1>{album.title}</h1>
+  {`${album.id} - ${album.userId} - ${album.title}`}
+</Layout>
