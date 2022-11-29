@@ -5,28 +5,30 @@ Super lightweight and scrapy static app built on Astro.
 JSX-like syntax, compiles fully to HTML at build-time, leaving zero JavaScript.
 
 The inherant pitfall being: the quirks of my first time using Astro.
-I've been wanting to take a stab at it for a couple weeks and the moment felt appropriate in the scope of the No-JS topic. No so smooth stylisticly spealing.
+I've been wanting to take a stab at it for a couple weeks and the moment felt appropriate in the scope of the No-JS topic. No so smooth stylisticly speaking.
 
 
 ----
 
-## Command Line
+## Repo
+```
+git clone https://github.com/brokenmold/astro-photo.git
+```
 
-Install:<br>
-`yarn install`
+----
 
-Start Dev:<br>
-`yarn dev`
+## Quick Start
 
-Build:<br>
-`yarn build`
-
-Preview:<br>
-`yarn preview`
+```
+Install:      yarn install
+Start Dev:    yarn dev
+Build:        yarn build
+Preview:      yarn preview
+```
 
 ----
 
 ## Docs
 
-[Astro Docs](https://docs.astro.build)
-[JSON Placeholder Docs](https://jsonplaceholder.typicode.com)
+[Astro.build | Docs](https://docs.astro.build)<br/>
+[JSON Placeholder | Docs](https://jsonplaceholder.typicode.com)
