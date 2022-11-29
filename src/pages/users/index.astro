@@ -2,6 +2,7 @@
 import Layout from '@layouts/Layout.astro';
 import Card from '@components/Card.astro';
 
+// Get All Users
 const users = await fetch('https://jsonplaceholder.typicode.com/users/')
   .then((data) => data.json());
 ---
@@ -16,17 +17,10 @@ const users = await fetch('https://jsonplaceholder.typicode.com/users/')
       {users.map((user: {
         id: number;
         name: string;
-        username: string;
         email: string;
         address: {
-          street: string;
-          suite: string;
           city: string;
           zipcode: string;
-          geo: {
-            lat: string;
-            lng: string;
-          };
         };
         phone: string;
         website: string;
@@ -36,7 +30,6 @@ const users = await fetch('https://jsonplaceholder.typicode.com/users/')
           bs: string;
         };
       }) => (
-
         <Card
           href={`/users/${user.id}`}
           title={user.name}
@@ -47,8 +40,8 @@ const users = await fetch('https://jsonplaceholder.typicode.com/users/')
             <li>City: {user.address.city}, {user.address.zipcode}</li>
           </ul>
         </Card>
-
       ))}
     </ul>
+
   </main>
 </Layout>
