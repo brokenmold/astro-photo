@@ -16,7 +16,11 @@ const { title } = Astro.props;
 		<title>Photo-Fake | {title}</title>
 	</head>
 	<body>
-		<h1>Photo-Fake</h1>
+		<main>
+			<a href="/" class="home">
+				<h1><span class="text-gradient">Photo-Fake</span></h1>
+			</a>
+		</main>
 		<slot />
 	</body>
 </html>
@@ -33,5 +37,24 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+
+	/* Normalize Lists */
+	ul {
+    list-style: none;
+    padding: 0;
+  }
+
+	/* Home Link */
+	a.home {
+		text-decoration: none;
 	}
 </style>
