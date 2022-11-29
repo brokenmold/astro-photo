@@ -11,7 +11,8 @@ const users = await fetch('https://jsonplaceholder.typicode.com/users/')
   <main>
 
     <h2>All Users</h2>
-    <h3>Here are all the cool people that contribute photos!</h3>
+    <span>{users.length} Users Found</span>
+    <h3>Here are our wonder contributers.</h3>
 
     <ul role="list" class="link-card-grid">
       {users.map((user: {
