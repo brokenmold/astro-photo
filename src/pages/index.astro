@@ -24,7 +24,7 @@ const users = await fetch('https://jsonplaceholder.typicode.com/users/')
         company: { name: string, bs: string }
       }) => (
         <Card
-          href={`/users/${user.id}`}
+          href={`/${user.id}`}
           title={user.name}
           body={user.company.bs}
         >
