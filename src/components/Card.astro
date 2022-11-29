@@ -14,11 +14,11 @@ const { href, title, body } = Astro.props;
 			{title}
 			<span>&rarr;</span>
 		</h2>
-		<p>
-			{body}
-		</p>
+		<strong>{body}</strong>
+		<slot />
 	</a>
 </li>
+
 <style>
 	.link-card {
 		list-style: none;
