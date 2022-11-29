@@ -22,7 +22,6 @@ const { user } = Astro.props;
 // Get Photo Album
 const photos = await fetch(`https://jsonplaceholder.typicode.com/albums/${user.id}/photos`)
   .then((data) => data.json());
-
 ---
 
 <Layout title={user.name}>
@@ -49,5 +48,6 @@ const photos = await fetch(`https://jsonplaceholder.typicode.com/albums/${user.i
         />
       ))}
     </ul>
+
   </main>
 </Layout>
