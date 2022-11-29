@@ -1,7 +1,7 @@
 
 # Astro-Photo
 
-Super lightweight and scrapy static app built on Astro.
+Super lightweight and scrapy static app built on Astro.<br/>
 JSX-like syntax, compiles fully to HTML at build-time, leaving zero JavaScript.
 
 The inherant pitfall being: the quirks of my first time using Astro.
