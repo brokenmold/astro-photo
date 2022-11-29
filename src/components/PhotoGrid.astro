@@ -1,0 +1,50 @@
+---
+export interface Props {
+	title: string;
+	url: string;
+	thumbnailUrl: string;
+}
+
+const { title, url, thumbnailUrl } = Astro.props;
+---
+<container>
+<a href={url}>
+	<li class="link-card">
+		<img src={thumbnailUrl} />
+		<slot />
+	</li>
+</a>
+</container>
+
+<style>
+	container {
+		padding-top: 1rem;
+	}
+	.link-card {
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+	.link-card > a {
+		text-decoration: none;
+		line-height: 1.4;
+	}
+	h2 {
+		margin: 0;
+		font-size: 1.25rem;
+		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+	}
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 0;
+		color: #444;
+	}
+	.link-card:is(:hover, :focus-within) {
+		/* background-position: 0; */
+	}
+	.link-card:is(:hover, :focus-within) h2 {
+		color: rgb(var(--accent));
+	}
+</style>
